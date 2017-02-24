@@ -1074,10 +1074,38 @@ http://madders.kktix.cc/，包含許多精力流程</p>
 		"line2": document.getElementById("lineInput2").value,
 		"message2": document.getElementById("messageInput2").value,
 		},
+		
 		function (data) {
-		document.write("--------------------------");
-		document.write("填單成功");
-		document.write("--------------------------");
+			$(".haha").css("display","block");
+			$(".haha").css("background-color","#f73859");
+			$(".haha .mailpaper").css("top","10%");
+
+			setTimeout(function(){ 
+				$(".haha .mailpaper").css("top","50%");
+				$(".haha .mailpaper").css("transition-duration","0.5s");
+			}, 500);
+			setTimeout(function(){ 
+				$(".haha .mailpaper").css("opacity","0");
+				$(".haha .mailpaper").css("transition-duration","0.3s");
+				$(".haha .mailbottom").css("opacity","0");
+				$(".haha .mailpaper").css("transition-duration","0.3s");
+				$(".haha .mailtop").css("opacity","0");
+				$(".haha .mailtop").css("transition-duration","0.3s");
+				$(".haha .mailclose").css("opacity","1");
+				$(".haha .mailclose").css("transition-duration","0.5s");
+			}, 1000);
+			setTimeout(function(){ 
+				$(".haha .mailclose").css("transition-duration","0.5s");
+				$(".haha .mailclose").css("top","-100%");
+			}, 1500);
+			setTimeout(function(){ 
+				$(".alert").css("opacity","1");
+				$(".alert").css("transition-duration","1s");
+			}, 2000);
+			setTimeout(function(){
+				$(".haha").css("display","none");
+				location.reload();
+			}, 3000);
 		});
 		}
 	</script>
